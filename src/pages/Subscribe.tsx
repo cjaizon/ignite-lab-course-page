@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom"
 import { Logo } from "../components/Logo"
 import { useCreateSubscriberMutation, useGetFirstLessonQuery } from "../graphql/generated"
 
+import mockup from '../assets/images/code_mockup.png'
+
 const Subscribe = () => {
     const { data } = useGetFirstLessonQuery()
     const [name, setName] = useState('')
@@ -64,7 +66,7 @@ const Subscribe = () => {
                 </div>
             </div>
 
-            <img src="/src/assets/images/code_mockup.png" alt="" className="mt-10" />
+            <img src={mockup} alt="" className="mt-10" />
         </div>
     )
 }
